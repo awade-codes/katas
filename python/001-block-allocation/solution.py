@@ -1,0 +1,12 @@
+def calculate_storage(filesize: int, block_size: int = 4096) -> int:
+    """
+    Return the number of bytes allocated on disk to store a file of `filesize` bytes,
+    assuming fixed-size blocks. Allocation = ceil(filesize / block_size) * block_size.
+    0-byte files allocate 0 bytes (ignoring metadata).
+    """
+    if filesize < 0:
+        raise ValueError("filesize must be non-negative")
+    if block_size <= 0:
+        raise ValueError("block_size must be positive")
+    blocks = (filesize + block_size - 1) // block_size  # ceiling integer division
+    return blocks * block_size
