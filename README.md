@@ -1,7 +1,11 @@
 # katas
 
-python/
+katas/
+  README.md
+  python/
+    requirements.txt
     001-block-allocation/
-      solution.py
-      test_solution.py
-      README.md   # problem, approach, examples
+      README.md
+      solution.py           # you implement here
+      test_solution.py      # pytest tests
+
