@@ -1,5 +1,5 @@
 import pytest
-from solution import calculate storage
+from solution import calculate_storage
 
 @pytest.mark.parametrize("filesize, block_size, expected", [
     (0, 4096, 0),
